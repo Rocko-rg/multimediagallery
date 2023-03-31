@@ -1,0 +1,740 @@
+:root{
+    --color-1: rgb(20, 20, 20);
+    --color-2: #ffffff;
+    --color-3: rgba(255, 255, 255, 0);
+    --color-4: rgba(255, 255, 255, 0.308);
+    --color-5: rgba(255, 255, 255, 0.400);
+    --linear-gradient-1: linear-gradient(190deg, #0a0a0a00, #0a0a0a1f, #0c0c0ce1);
+    --logo-width: 60px;
+    --h1-font-size: 120px;
+    --h2-font-size: 90px;
+    --h3-font-size: 70px;
+    --h4-font-size: 50px;
+    --h5-font-size: 30px;
+    --h6-font-size: 22px;
+    --p-font-size: 14px;
+    --p-2-font-size: 18px;
+    --i-font-size: 22px;
+    --span-font-size: 20px;
+    --span-2-font-size: 18px;
+    --dt-font-size: 22px;
+    --dd-font-size: 16px;
+    --prev-next-icon-width-height: 30px;
+}
+*{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    background-color: var(--color-1);
+    color: var(--color-2);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ------------------------------ Header ------------------------------ */
+
+header{
+    width: 100%;
+    height: 150px;
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.nav a{
+    height: 60px;
+}
+.header-row-left{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.projects{
+    display: none;
+}
+.projects-icon{
+    display: none;
+}
+.header-row-right{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: var(--logo-width);
+    margin: 0 50px 0 0;
+}
+.menu{
+    height: 30px;
+    font-size: var(--p-2-font-size);
+    margin: 0 30px 0 0;
+    display: flex;
+    align-items: center;
+}
+.menu-icon{
+    width: 60px;
+    height: 60px;
+    font-size: var(--i-font-size);
+    font-weight: 200;
+    margin: 0 -12px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-3);
+    border-radius: 50%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.menu-icon:hover, 
+.header-row-right:hover .menu-icon{
+    border-color: var(--color-2);
+}
+
+
+/* ------------------------------ Projects window ------------------------------ */
+
+.projects-window{
+    display: none;
+}
+
+
+/* ------------------------------ Menu window ------------------------------ */
+
+.menu-window{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 15;
+    background-color: var(--color-1);
+    top: 0;
+    left: 100%;
+    transition: 0.8s cubic-bezier(.25,.25,.1,1);
+}
+.menu-ul{
+    width: 500px;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu-ul li{
+    list-style: none;
+}
+.menu-name{
+    width: auto;
+    height: 100px;
+    font-size: var(--h2-font-size);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: var(--color-4);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-4);
+    transition: 0.1s;
+}
+.menu-name:hover{
+    color: var(--color-2);
+}
+.menu-ul a{
+    text-decoration: none;
+}
+.menu-ul a:hover{
+    color: var(--color-4);
+}
+.portfolio{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.portfolio-ul{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.portfolio-ul h6{
+    font-size: var(--h6-font-size);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-4);
+    transition: 0.1s;
+}
+.portfolio-ul h6:hover{
+    color: var(--color-2);
+}
+
+
+/* ------------------------------ Main ------------------------------ */
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background-image: var(--linear-gradient-1), url(f/c1.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+.title{
+    position: absolute;
+    top: 42vh;
+    left: 70px;
+}
+.name{
+    height: 100px;
+    font-size: var(--h1-font-size);
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    color: var(--color-2);
+}
+.type{
+    font-size: var(--p-font-size);
+    margin: 0;
+    color: var(--color-2);
+}
+.scroll{
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    bottom: 55px;
+    left: 70px;
+}
+.scroll p{
+    font-size: var(--p-2-font-size);
+    margin: 0;
+    position: absolute;
+    animation: move 1.5s infinite;
+}
+@keyframes move{
+    0%{
+        bottom: 16px;
+    }
+    50%{
+        bottom: 0;
+    }
+    100%{
+        bottom: 16px;
+    }
+}
+.section-2{
+    width: 1200px;
+    padding: 150px 70px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.section-2 h5{
+    font-size: var(--h5-font-size);
+    margin: 0;
+}
+.section-3{
+    width: 100%;
+    height: 70vh;
+    background-image: url(f/c2.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.section-4{
+    width: 1200px;
+    padding: 150px 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.section-4 img{
+    width: 49%;
+}
+.section-5{
+    width: 100%;
+    height: 80vh;
+    background-image: url(f/c5.jpg); 
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
+.next-project{
+    width: 1200px;
+    padding: 150px 70px 200px 70px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+.next-project p{
+    font-size: var(--p-2-font-size);
+    color: var(--color-2);
+    margin: 0;
+}
+.next-project h1{
+    font-size: var(--h2-font-size);
+    color: var(--color-2);
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--color-4);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-2);
+    transition: 0.1s;
+}
+.next-project h1:hover{
+    color: var(--color-2);
+}
+.next-project a{
+    text-decoration: none;
+}
+
+/* ------------------------------ Footer ------------------------------ */
+
+footer{
+    width: 100%;
+    height: 150px;
+    padding: 0 70px ;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: fixed;
+    z-index: 10;
+}
+.footer-row-left, 
+.footer-row-right{
+    display: flex;
+    align-items: center;
+}
+.follow-div{
+    height: 110px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.follow-us{
+    height: 30px;
+    font-size: var(--p-2-font-size);
+    margin: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 40%;
+    transition: 0.2s;
+}
+.follow-us p{
+    margin: 0;
+}
+.follow-us i{
+    font-size: var(--i-font-size);
+    margin: 0 0 0 45px;
+    transition: 0.2s;
+}
+.follow-ul{
+    display: flex;
+    margin: 0 -20px 0 0;
+    position: absolute;
+    top: 70%;
+    opacity: 0;
+    transition: 0.2s;
+}
+.follow-ul li{
+    width: 60px;
+    height: 60px;
+    list-style: none;
+    font-size: var(--i-font-size);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-3);
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.follow-div:hover .follow-us{
+    top: 0;
+}
+.follow-div:hover .follow-us i{
+    font-size: 0px;
+    margin: 0;
+}
+.follow-div:hover .follow-ul{
+    opacity: 1;
+    top: 37%;
+}
+.follow-ul li:hover{
+    border-color: var(--color-2);
+}
+
+
+/* ==================================== Max 1600px ==================================== */
+
+@media screen and (max-width: 1600px){
+
+    :root{
+    --logo-width: 40px;
+    --h1-font-size: 70px;
+    --h2-font-size: 60px;
+    --h3-font-size: 40px;
+    --h4-font-size: 38px;
+    --h5-font-size: 22px;
+    --h6-font-size: 14px;
+    --p-font-size: 14px;
+    --p-2-font-size: 12px;
+    --i-font-size: 14px;
+    --span-font-size: 16px;
+    --span-2-font-size: 12px;
+    --dt-font-size: 16px;
+    --dd-font-size: 12px;
+    --prev-next-icon-width-height: 20px;
+    }
+
+
+    /*-------------------- Header -------------------- */
+
+    header{
+        height: 110px;
+        padding: 0 50px;
+    }
+    .nav a{
+        height: 40px;
+    }
+    .logo{
+        margin: 0 30px 0 0;
+    }
+    .menu{
+        height: 30px;
+        margin: 0 15px 0 0;
+    }
+    .menu-icon{
+        width: 40px;
+        height: 40px;
+    }
+
+
+    /*-------------------- Menu window -------------------- */
+
+    .menu-ul{
+        width: 300px;
+    }
+    .menu-name{
+        height: 65px;
+    }
+
+
+    /*-------------------- Main -------------------- */
+
+
+    .title{
+        left: 50px;
+    }
+    .name{
+        height: 80px;
+    }
+    .scroll{
+        height: 30px;
+        bottom: 39px;
+        left: 50px;
+    }
+    @keyframes move{
+        0%{
+            bottom: 14px;
+        }
+        50%{
+            bottom: 0;
+        }
+        100%{
+            bottom: 14px;
+        }
+    }
+    .section-2{
+        width: 900px;
+        padding: 120px 50px;
+    }
+    .section-4{
+        width: 900px;
+        padding: 120px 50px;
+    }
+    .next-project{
+        width: 900px;
+        padding: 120px 50px 200px 50px;
+ 
+    }
+    
+
+    /*-------------------- Footer -------------------- */
+
+    footer{
+        height: 110px;
+        padding: 0 50px;
+    }
+    .follow-div{
+        width: 220px;
+    }
+    .follow-us{
+        top: 37%;
+    }
+    .follow-us i{
+        margin: 0 0 0 28px;
+    }
+    .follow-ul{
+        margin: 0 -12px 0 0;
+    }
+    .follow-ul li{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* ==================================== Max 992px ==================================== */
+
+@media screen and (max-width: 992px){
+
+    :root{
+        --h1-font-size: 60px;
+        --h2-font-size: 50px;
+        --h3-font-size: 32px;
+        --h4-font-size: 32px;
+        --h5-font-size: 20px;
+        --h6-font-size: 14px;
+        --span-font-size: 13px;
+        --span-2-font-size: 11px;
+        --prev-next-icon-width-height: 20px;
+    }
+
+    /*-------------------- Header -------------------- */
+
+    header{
+        height: 80px;
+        padding: 0 40px;
+    }
+    .logo{
+        margin: 0 30px 0 0;
+    }
+    .menu{
+        display: none;
+    }
+    .menu-icon{
+        width: 40px;
+        height: 40px;
+    }
+    .menu-icon:hover,  
+    .header-row-right:hover .menu-icon{
+        border-color: transparent;
+    }
+    .menu-icon:active{
+        border-color: var(--color-2);
+    }
+
+
+    /*-------------------- Menu window -------------------- */
+
+    .menu-ul{
+        width: 300px;
+    }
+    .menu-name{
+        height: 55px;
+    }
+
+
+    /*-------------------- Main -------------------- */
+
+    .title{
+        left: 40px;
+    }
+    .name{
+        height: 60px;
+    }
+    .scroll{
+        bottom: 16px;
+        left: 40px;
+    }
+    .section-2{
+        width: 100%;
+        padding: 110px 40px;
+    }
+    .section-4{
+        width: 100%;
+        padding: 110px 40px 0 40px;
+        flex-wrap: wrap;
+    }
+    .section-4 img{
+        width: 100%;
+        margin-bottom: 110px;
+    }
+    .next-project{
+        width: 100%;
+        padding: 110px 40px 200px 40px;
+ 
+    }
+
+
+    /*-------------------- Footer -------------------- */
+
+    footer{
+        height: 80px;
+        padding: 0 40px;
+    }
+    .follow-div{
+        width: 200px;
+    }
+    .follow-us{
+        top: 32%;
+    }
+    .follow-us p{
+        display: none;
+    }
+    .follow-us i{
+        margin: 0 0 0 28px;
+    }
+    .follow-ul{
+        margin: 0 -12px 0 0;
+    }
+    .follow-ul li{
+        width: 40px;
+        height: 40px;
+    }
+    .follow-div:hover .follow-ul{
+        opacity: 1;
+        top: 28%;
+    }
+    .follow-ul li:hover{
+        border-color: transparent;
+    }
+    .follow-ul li:active{
+        border-color: var(--color-2);
+    }
+}
+
+
+/* ==================================== Max 576px ==================================== */
+
+@media screen and (max-width: 576px) {
+    
+    :root{
+        --h1-font-size: 50px;
+        --h2-font-size: 40px;
+        --h3-font-size: 25px;
+        --h6-font-size: 13px;
+        --span-font-size: 13px;
+        --span-2-font-size: 10px;
+    }
+
+
+    /*-------------------- Header -------------------- */
+
+    header{
+        height: 60px;
+        padding: 0 30px;
+    }
+    .logo{
+        margin: 0 20px 0 0;
+    }
+
+
+    /*-------------------- Menu window -------------------- */
+
+    .menu-ul{
+        width: auto;
+    }
+    .menu-name{
+        height: 50px;
+    }
+
+
+    /*-------------------- Main -------------------- */
+
+    .title{
+        left: 30px;
+    }
+    .name{
+        height: 45px;
+    }
+    .scroll{
+        bottom: 14px;
+        left: 30px;
+    }
+    .section-2{
+        padding: 100px 30px;
+        flex-direction: column;
+    }
+    .section-2-left{
+        margin-bottom: 30px;
+    }
+    .section-2-left, .section-2-right{
+        width: 100%;
+    } 
+    .section-4{
+        width: 100%;
+        padding: 100px 30px 0 30px;
+        flex-wrap: wrap;
+    }
+    .section-4 img{
+        margin-bottom: 100px;
+    }
+    .next-project{
+        width: 100%;
+        padding: 100px 30px 200px 30px;
+ 
+    }
+    
+
+    /*-------------------- Footer -------------------- */
+
+    footer{
+        height: 60px;
+        padding: 0 30px;
+    }
+    .follow-div{
+        width: 60px;
+    }
+    .follow-us{
+        top: 25%;
+    }
+    .follow-us i{
+        margin: 0 0 0 28px;
+    }
+    .follow-ul{
+        margin: 0 -12px 0 0;
+        flex-direction: column;
+    }
+    .follow-div:hover .follow-ul{
+        opacity: 1;
+        top: -150px;
+    }
+    .follow-div:hover .follow-us i{
+        font-size: 1px;
+        margin: 25px 7px 0 0;
+    }
+}
